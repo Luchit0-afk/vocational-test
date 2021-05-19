@@ -9,6 +9,6 @@ Sequel.migration do
   end
 
   down do
-    drop_table(:posts)
+    drop_table(:surveys)
   end
 end
