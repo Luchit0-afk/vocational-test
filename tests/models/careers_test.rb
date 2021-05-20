@@ -1,18 +1,18 @@
+require File.expand_path '../../test_helper.rb', __FILE__
+
 class CareerTest < MiniTest::Unit::TestCase
   MiniTest::Unit::TestCase
   
-  def test_career_many_has_many_surveys
+  def test_careers_many_has_many_surveys
     # Arrange
 
-    career1 = Career.create(name: 'Computacion')
-    carrer2 = Career.create(name: 'Educacion Inicial')
-    career3 = Career.create(name: 'Veterinaria')
+    career = Career.create(name: 'Computacion')
     
     # Act
 
-    Survey.create(username: 'User 1', career_id: career1.id)
-    Survey.create(username: 'User 2', career_id: career2.id)
-    Survey.create(username: 'User 3', career_id: career3.id)
+    Survey.create(username: 'User 1', career_id: career.id)
+    Survey.create(username: 'User 2', career_id: career.id)
+    Survey.create(username: 'User 3', career_id: career.id)
     
     # Assert
 
