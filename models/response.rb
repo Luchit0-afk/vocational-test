@@ -1,5 +1,5 @@
 class Response < Sequel::Model
-	many_to_one :Survey 
-	many_to_one :Question
-	one_to_one :Choice
+	many_to_one :survey 
+	many_to_one :question
+	one_to_one  :choice
 end
