@@ -8,11 +8,11 @@ class App < Sinatra::Base
   get "/hello/:name" do
    @name = params[:name]
    erb :hello_template
+   #erb  :test/test
   end
 
   post "/careers" do
-    data = JSON.parse request.body.read
-    career = Career.new(name: data['name'])
+    career = Career.new(name: params[:name])
 
     if career.save
       [201, {'Location' => "careers/#{career.id}" },'CREATED']
@@ -33,7 +33,9 @@ class App < Sinatra::Base
   end
 
   get '/careers' do
-    Career.all.map { |c| c.name}
+    @careers = Career.all
+
+    erb :careers_index
   end
 
   post "/posts" do
