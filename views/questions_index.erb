@@ -1,0 +1,30 @@
+<!DOCTYPE html>  
+	
+<title> Preguntas </title>
+
+<h3> Ingrese numero de pregunta </h3>
+
+<form action '/questions' method = 'POST'>
+	<input type = 'text' numero = 'numero' value = 'numero'>
+	<input type = 'submit' value = 'Aceptar'>
+<form>
+
+
+
+<h3> Ingrese descripcion de preguntas </h3>
+
+<form action '/questions' method = 'POST'>
+	<input type = 'text' descripcion = 'name' value = 'name'>
+	<input type = 'submit' value = 'Aceptar'>
+<form>
+
+
+
+<ul>
+
+	<% @questions.map do |question| %> 
+	<li>
+		<a href = "questions/<%=question.id %>"> <%= question.name %> </a>
+	</li>
+	<% end %>
+</ul>

@@ -53,5 +53,25 @@ class App < Sinatra::Base
     p = Post.where(id: 1).last
     p.description
   end
+
+
+  post "/questions" do
+    question = Question.new(name: params[:name], descripcion: params[:descripcion])
+
+    if question.save
+      [201, {'Location' => "questions/#{question.id}" },'CREATED']
+    else
+      [500,{},'Internal Server Error']
+    end
+  end
+
+  get '/questions' do
+    @questions = Question.all
+
+    erb :questions_index
+  end
+
+
+
 end
 
