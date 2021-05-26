@@ -1,0 +1,10 @@
+
+<h2>Bienvenidos al cuestionario</h2>
+
+<ol>
+	<% @questions.map do |question| %> 
+	<li>
+		<%= question.name %> 
+	</li>
+	<% end %>
+</ol>

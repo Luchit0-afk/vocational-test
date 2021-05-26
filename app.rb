@@ -77,7 +77,6 @@ class App < Sinatra::Base
 
   get '/surveys' do
     @questions = Question.all
-    @surveys = Survey.all
 
     erb :surveys_index
   end
