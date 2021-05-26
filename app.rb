@@ -60,7 +60,7 @@ class App < Sinatra::Base
 
 
   post "/questions" do
-    question = Question.new(name: params[:name], descripcion: params[:descripcion])
+    question = Question.new(params[:question])
 
     if question.save
       [201, {'Location' => "questions/#{question.id}" },'CREATED']
@@ -74,7 +74,6 @@ class App < Sinatra::Base
 
     erb :questions_index
   end
-
 
 
 end

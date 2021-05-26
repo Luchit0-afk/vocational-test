@@ -2,29 +2,21 @@
 	
 <title> Preguntas </title>
 
-<h3> Ingrese numero de pregunta </h3>
-
-<form action '/questions' method = 'POST'>
-	<input type = 'text' numero = 'numero' value = 'numero'>
-	<input type = 'submit' value = 'Aceptar'>
-<form>
 
 
-
-<h3> Ingrese descripcion de preguntas </h3>
-
-<form action '/questions' method = 'POST'>
-	<input type = 'text' descripcion = 'name' value = 'name'>
-	<input type = 'submit' value = 'Aceptar'>
-<form>
-
-
+<form action = '/questions' method = 'POST'>
+	<h4> Pregunta: <input type='name' name= 'question[name]'/></h4>
+	<h4> Descripcion de la pregunta: <input type = 'description' name = 'question[description]'/></h4>
+	<%= question[number] = question.id %>
+	<h4> Tipo de pregunta: <input type = 'type' name = 'question[type]'/></h4>
+	<input type = 'submit' value = 'Aceptar'/>
+</form>
 
 <ul>
 
 	<% @questions.map do |question| %> 
 	<li>
-		<a href = "questions/<%=question.id %>"> <%= question.name %> </a>
+		<a href = "questions/<%=question.id %>"> <%= question.name %>  (<%= question.description.to_s %>)
 	</li>
 	<% end %>
 </ul>
