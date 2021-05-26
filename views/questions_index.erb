@@ -7,16 +7,15 @@
 <form action = '/questions' method = 'POST'>
 	<h4> Pregunta: <input type='name' name= 'question[name]'/></h4>
 	<h4> Descripcion de la pregunta: <input type = 'description' name = 'question[description]'/></h4>
-	<%= question[number] = question.id %>
 	<h4> Tipo de pregunta: <input type = 'type' name = 'question[type]'/></h4>
 	<input type = 'submit' value = 'Aceptar'/>
 </form>
 
-<ul>
+<ol>
 
 	<% @questions.map do |question| %> 
 	<li>
-		<a href = "questions/<%=question.id %>"> <%= question.name %>  (<%= question.description.to_s %>)
+		<a href = "questions/<%=question.id %>">  <%= question.name %>  (<%= question.description.to_s %>) </a>
 	</li>
 	<% end %>
-</ul>
+</ol>
