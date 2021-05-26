@@ -38,6 +38,10 @@ class App < Sinatra::Base
     erb :careers_index
   end
 
+  get '/careers/:id' do
+    "Carrera"
+  end
+
   post "/posts" do
     request.body.rewind  # in case someone already read it
     data = JSON.parse request.body.read
