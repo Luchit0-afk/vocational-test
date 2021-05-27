@@ -2,7 +2,7 @@ require './models/init.rb'
 
 class App < Sinatra::Base
   get '/' do
-    "Hello World"
+    erb :hello_template
   end
 
   get "/hello/:name" do
