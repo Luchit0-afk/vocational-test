@@ -7,6 +7,7 @@ class App < Sinatra::Base
 
   get "/hello/:name" do
    @name = params[:name]
+   
    erb :hello_template
    #erb  :test/test
   end
@@ -71,7 +72,8 @@ class App < Sinatra::Base
 
   get '/questions' do
     @questions = Question.all
-
+    
+    
     erb :questions_index
   end
 

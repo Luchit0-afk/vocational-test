@@ -12,7 +12,6 @@
 </form>
 
 <ol>
-
 	<% @questions.map do |question| %> 
 	<li>
 		<a href = "questions/<%=question.id %>">  <%= question.name %>  (<%= question.description.to_s %>) </a>
