@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Cuestionario</title>
+        <link rel="stylesheet" type="text/css" href="/styles_surveys.css" />
+    </head>
+    <body>
+        <div class = "cabecera">
+            <header> 
+                <img id = "imagen" src="https://i.ibb.co/pLxkKtx/portada-2.jpg" > 
+                <h1 id = "titulo"> Bienvenidos al cuestionario </h1> 
+            </header>
+        </div>
+        <div class = "cuerpo">
+            <section>
+                 <h2 id = "TPregunta"> Lista de preguntas: </h2> 
+                <ol>
+                    <% @questions.map do |question| %> 
+                    <li id = "lista">
+                        <%= question.name %> 
+                    </li>
+                    <% end %>
+                </ol>
+            </section> 
+        </div>
+        
+    </body>
+</html> 

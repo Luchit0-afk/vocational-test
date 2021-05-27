@@ -1,0 +1,57 @@
+* {
+	 margin: 0px;
+	 padding: 0px;
+} 
+
+body {
+	margin: 15px auto;
+	text-align: left;
+ 	text-align: center;
+ 	background: #212F3D ;
+} 
+
+/*
+#imagen{
+	background: #FFCBB9;
+}
+*/
+.cabecera{
+	position: relative;
+}
+
+.cuerpo{
+	/*background: pink;*/
+	color : #FFFFFF;
+	width: 400px;
+	height:400px;
+	margin-top: 30px;
+	margin-left: 30px;
+	font-size: 20px;
+	font-family: verdana;
+	text-align: left;
+	float:left;
+}
+
+#imagen{
+  width: 100%;
+  height: 250px;
+}
+
+#titulo{
+	position: absolute;
+	top: 50%;
+    left: 50%;
+	transform: translate(-50%, -50%);
+	color: #FFFFFF;
+	font-size: 40px;
+	font-family: sans-serif;
+}
+
+#TPregunta{
+	text-decoration: underline;
+	margin-bottom: 20px;
+}
+
+#lista{
+	padding-top:3px;
+}

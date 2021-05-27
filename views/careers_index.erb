@@ -1,20 +1,36 @@
-<!DOCTYPE html>  
-	
-<title> Carreras disponibles </title>
+<!DOCTYPE html>
 
-<h3> Ingrese carreras </h3>
+<html lang="es">
+	<head>
+		  <meta charset="utf-8">
+		  <title>Carreras</title>
+		  <link rel="stylesheet" href="styles_careers.css">
+	</head>
 
-<form action '/careers' method = 'POST'>
-	<input type = 'text' name = 'name' value = 'name'>
-	<input type = 'submit' value = 'Aceptar'>
-<form>
+	<body>
+		<div class = "cuerpo">
+			<header id = "cabecera">
+				<h1 id = "titulo"> Carreras </h1>
+			</header>
+			<section id = "formulario">
+				<h3 id = "Icarreras"> Ingrese carreras <h3>
+				<form action '/careers' method = 'POST'>
+					<input type = 'text' name = 'name' value = 'Ingrese aqui su carrera'>
+					<input type = 'submit' value = 'Aceptar'>
+				<form>
 
-<ul>
-
-	<% @careers.map do |career| %> 
-	<li>
-		<a href = "careers/<%=career.id %>"> <%= career.name %> </a>
-		(<%=career.surveys.count.to_s  %>)
-	</li>
-	<% end %>
-</ul>
+			</section>
+			<aside id = "carreras">
+				<h3 id = "carrerasD"> Carreras disponibles </h3>
+				<ul>
+					<% @careers.map do |career| %> 
+					<li id = "lista">
+						<a href = "careers/<%=career.id %>"> <%= career.name %> </a>
+						(<%=career.surveys.count.to_s  %>)
+					</li>
+					<% end %>
+				</ul>
+			</aside>
+		</div>
+	</body>
+</html>

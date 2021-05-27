@@ -1,0 +1,58 @@
+* {
+	 margin: 0px;
+	 padding: 0px;
+} 
+
+body {
+ 	text-align: center;
+ 	background: #212F3D ;
+ 	color: #FFFFFF;
+}
+
+.cuerpo{
+	width: 900px;
+	margin: 15px auto;
+}
+	
+#cabecera {
+	/*background: yellow;*/
+	padding: 25px;
+} 
+
+#titulo{
+	/*background: blue;*/
+	font-size: 40px;
+	font-family: sans-serif;
+}
+
+#formulario{
+	/*background: green;*/
+	width: 400px;
+	height:400px;
+	float:left;
+	padding-top: 20px;
+	padding-left: 20px;
+	text-align: left;
+}
+
+#carreras{
+	padding-left: 50px;
+	text-align: left;
+	width: 400px;
+	height:400px;
+	/*background: red;*/
+	float:left;
+}
+
+#carrerasD{
+	font-size: 30px;
+	text-decoration: underline;
+}
+
+#lista{
+	padding-top:3px;
+}
+
+#Icarreras{
+	font-size: 20px;
+}
