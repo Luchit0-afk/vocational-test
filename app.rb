@@ -73,7 +73,6 @@ class App < Sinatra::Base
   get '/questions' do
     @questions = Question.all
     
-    
     erb :questions_index
   end
 

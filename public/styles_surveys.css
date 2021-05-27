@@ -20,8 +20,12 @@ body {
 }
 
 .cuerpo{
+	/*background: pink;*/
 	color : #FFFFFF;
+	width: 400px;
+	height:400px;
 	margin-top: 30px;
+	margin-left: 30px;
 	font-size: 20px;
 	font-family: verdana;
 	text-align: left;
@@ -43,7 +47,11 @@ body {
 	font-family: sans-serif;
 }
 
-#lista{
+#TPregunta{
 	text-decoration: underline;
 	margin-bottom: 20px;
+}
+
+#lista{
+	padding-top:3px;
 }

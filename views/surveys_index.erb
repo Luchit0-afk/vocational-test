@@ -2,8 +2,8 @@
 <html lang="es">
     <head>
         <meta charset="utf-8">
-         <title>Cuestionario</title>
-         <link rel="stylesheet" type="text/css" href="/styles_surveys.css" />
+        <title>Cuestionario</title>
+        <link rel="stylesheet" type="text/css" href="/styles_surveys.css" />
     </head>
     <body>
         <div class = "cabecera">
@@ -14,10 +14,10 @@
         </div>
         <div class = "cuerpo">
             <section>
-                 <h2 id = "lista"> Lista de preguntas: </h2> 
+                 <h2 id = "TPregunta"> Lista de preguntas: </h2> 
                 <ol>
                     <% @questions.map do |question| %> 
-                    <li>
+                    <li id = "lista">
                         <%= question.name %> 
                     </li>
                     <% end %>
