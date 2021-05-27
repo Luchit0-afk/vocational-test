@@ -76,5 +76,22 @@ class App < Sinatra::Base
   end
 
 
+  post "/choices" do
+    choice = Choice.new(params[:choice])
+
+    if choice.save
+      [201, {'Location' => "choices/#{choice.id}" },'CREATED']
+    else
+      [500,{},'Internal Server Error']
+    end
+  end
+
+  get '/choices' do
+    @choices = Choice.all
+
+    erb :choices_index
+  end
+
+
 end
 

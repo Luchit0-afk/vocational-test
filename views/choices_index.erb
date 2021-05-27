@@ -1,0 +1,21 @@
+<!DOCTYPE html>  
+	
+<title> Opciones </title>
+
+<h3> Elija Una Opcion </h3>
+
+<form action '/choices'>
+	<input type = 'submit' text = 'choice[text]' value = 'Si' class="texto"/>
+	<input type = 'submit' text = 'choice[text]' value = 'No'/>
+	<input type = 'submit' text = 'choice[text]' value = 'Masomenos'/>
+	<input type = 'submit' text = 'choice[text]' value = 'Tal vez'/>
+<form>
+
+<ul>
+
+	<% @choices.map do |choice| %> 
+	<li>
+		<a href = "choices/<%=choice.id %>"> <%= choice.text %> </a>
+	</li>
+	<% end %>
+</ul>
