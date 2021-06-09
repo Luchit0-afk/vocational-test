@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<%= @user.username %>
+	<form action='/responses' method='POST'>
+		<ol>
+			<% @questions.map do |question| %> 
+			<li> 
+				<%= question.description %> 
+				<br> 
+			<ul>
+				<% question.choices.map do |choice| %> 
+				<input required type='radio' name='<%= question.id%>' value='<%= choice.id %>' > <%= choice.text %>
+				<br>
+				<% end %>
+				<input type='hidden' name='question_id[]' value='<%= question.id %>'>
+			</ul>
+			<% end %>
+		</ol>
+		<input type='hidden' name='survey_id' value='<%= @user.id %>'>
+		<input type = 'submit' value = 'Aceptar'>
+	</form> 
+</body>
+</html>

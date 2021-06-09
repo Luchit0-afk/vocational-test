@@ -1,5 +1,5 @@
 class Choice < Sequel::Model
- many_to_one :outcome
+ one_to_many :outcomes
  one_to_one :response
  many_to_one :question
 end
