@@ -26,6 +26,20 @@ class App < Sinatra::Base
     erb :careers_index
   end
 
+  post "/careersAdmin" do
+    career = Career.new(name: params[:name])
+
+    career.save
+    
+    redirect "/careersAdmin"
+  end
+
+  get '/careersAdmin' do
+    @careers = Career.all
+
+    erb :careersAdmin_index
+  end
+
   post "/posts" do
     request.body.rewind 
     data = JSON.parse request.body.read
@@ -104,23 +118,6 @@ class App < Sinatra::Base
 
     erb :outcomes_index
   end
-
-  post "/choices" do
-    choice = Choice.new(params[:choice])
-
-    if choice.save
-      [201, {'Location' => "choices/#{choice.id}" },'CREATED']
-    else
-      [500,{},'Internal Server Error']
-    end
-  end
-
-  get '/choices' do
-    @choices = Choice.all
-
-    erb :choices_index
-  end
-
 
 end
 
