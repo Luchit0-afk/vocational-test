@@ -103,7 +103,6 @@ class App < Sinatra::Base
     @career = Career.find(id: resCareer)
 
     erb :outcomes_index
-
   end
 
   post "/choices" do

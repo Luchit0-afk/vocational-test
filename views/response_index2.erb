@@ -3,26 +3,58 @@
 <head>
 	<meta charset="utf-8">
 	<title></title>
+	<link rel="stylesheet" type="text/css" href="styles_response.css">
 </head>
-<body>
-	<%= @user.username %>
-	<form action='/responses' method='POST'>
-		<ol>
-			<% @questions.map do |question| %> 
-			<li> 
-				<%= question.description %> 
-				<br> 
+<body >
+	<div>
+		<nav id="navegacion">
 			<ul>
-				<% question.choices.map do |choice| %> 
-				<input required type='radio' name='<%= question.id%>' value='<%= choice.id %>' > <%= choice.text %>
-				<br>
-				<% end %>
-				<input type='hidden' name='question_id[]' value='<%= question.id %>'>
+				<li>Cuestionario</li>
+				<li> Carreras</li>
 			</ul>
-			<% end %>
-		</ol>
-		<input type='hidden' name='survey_id' value='<%= @user.id %>'>
-		<input type = 'submit' value = 'Aceptar'>
-	</form> 
-</body>
-</html>
+		</nav>
+		<header>
+			<figure id="cabecera">
+				<img id="imagen" src="images/cabecera(1).png">
+			</figure>
+		</header>
+	</div>
+	<div id="agrupar">
+		<figure > 
+			<!--img id="imagen" src="images/cabeceraTestVocacional3(2).png"-->
+		</figure>
+		<h3 id="bienvenida">
+			<p>Contanos de vos</p>
+		</h3>
+		<article id="form">
+			<form action='/responses' method='POST'>
+				<ol id="preguntas">
+					<% @questions.map do |question| %> 
+					<li> 
+						<%= question.description %> 
+						<br> 
+						<ul>
+							<% question.choices.map do |choice| %> 
+							<input required type='radio' name='<%= question.id%>' value='<%= choice.id %>' > <%= choice.text %>
+							<br>
+							<% end %>
+							<input type='hidden' name='question_id[]' value='<%= question.id %>'>
+						</ul>
+						<% end %>
+					</ol>
+					<input type='hidden' name='survey_id' value='<%= @user.id %>'>
+					<p id = "aviso">
+						Recorda que debes seleecionar al menos una opcion de todas las preguntas.
+					</p>
+					<input type = 'submit' value = 'Enviar respuestas'>
+				</form> 	
+			</article>
+
+			<footer id="contacto">
+				UNRC &copy; 2021
+			</footer>
+		</div>
+
+	</body>
+	</html>
+
