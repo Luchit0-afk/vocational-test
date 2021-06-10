@@ -54,7 +54,8 @@ body {
 }
 
 #lista li{
-	padding-top:3px;
+	padding:2px 1px;
+	padding-left: 10px;
 	background: #deedf0;
 	list-style: none;
 	border: black 2px solid;

@@ -93,10 +93,10 @@ class App < Sinatra::Base
   end
 
   post '/responses' do
-    usuario = Survey.find(id: params[:survey_id])
+    @usuario = Survey.find(id: params[:survey_id])
 
     params[:question_id].each do |question_id|
-      r = Response.new(choice_id: params[:"#{question_id}"], survey_id: usuario.id, question_id: question_id)
+      r = Response.new(choice_id: params[:"#{question_id}"], survey_id: @usuario.id, question_id: question_id)
       r.save
     end
     
@@ -106,7 +106,7 @@ class App < Sinatra::Base
       res[career.id] = 0
     end
       
-    for response in usuario.responses
+    for response in @usuario.responses
       c = Choice.find(id: response.choice_id)
       for outcome in c.outcomes
         res[outcome.career_id] = res[outcome.career_id] + 1
