@@ -10,7 +10,7 @@
  */
 
 body{
-	background: #E4E7EB;
+	background: #293b5f;
 }
 
 #cabecera{
@@ -42,6 +42,7 @@ body{
 #navegacion {
 	 background: #dddddd;
 	 padding: 5px 15px;
+	 
 }
 
 #bienvenida {
@@ -50,32 +51,80 @@ body{
 	margin-bottom: 15px;
 	*/
 	padding: 5px 15px;
-	font-size: 25px;
-	background: #125d98;
-	font-family: Verdana;
+	font-size: 30px;
+	background: #47597e;
+	font-family: arial;
 	color: white;
 }
 
 #form{
-	background: #47597e;
-	padding: 10px 0;
-	color: white;
-	font-size: 25px;
+	background: #dbe6fd;
+	color: black;
+	font-size: 17px;
+	width: 720px;
+	padding-right: 50px;
+	float: left;
+	padding-top:  20px;
+	padding-bottom: 20px;
+	padding-left: 15px;
+	font-family: arial;
+
 }
 
 #preguntas{
-
+	padding: 5px;
 }
 
 #aviso{
 	padding: 10px 0;
 }
 
+#bannerVertical{
+	float: right;
+	width: 235px;
+	position: relative;
+	margin-bottom: 0px;
+}
+
+
+
+#informacion {
+	background: #8383e3;
+	/*padding-bottom: 42%;*/
+	width: 235px;
+	margin: 0px;
+	text-align:center;
+	float:right;
+	color:white;
+	font-family:arial;
+}
+
+#tituloCarreras{
+	margin-top:23px;
+	font-size: 28px;
+}
+
+#informacionCarreras{
+	margin-top: 23px;
+	padding-bottom: 16px;
+	font-size:23px
+}
+
+
+#carreras {
+	margin-top: 10px;
+	margin-right: 35px;
+	text-align: center;
+}
+
 #contacto{
 	padding: 5px 15px;
-	background: #f5a962;
+	background: #3498db;
 	color: white;
 	text-align: center;
+	height: 50px;
+	text-align: center;
+	clear: both;
 }
 
 #imagen{
