@@ -27,6 +27,7 @@ body {
 	background: #3c8dad;
 	font-size: 40px;
 	font-family: sans-serif;
+	border: black 2px solid;
 }
 
 #carreras{
@@ -36,7 +37,6 @@ body {
 	width: 847px;
 	margin-bottom: 10px;
 	color: black;
-	border: black 2px solid;
 }
 
 #carrerasD{
