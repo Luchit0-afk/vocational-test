@@ -7,12 +7,12 @@
 </head>
 <body >
 	<div>
-		<nav id="navegacion">
+		<!--nav id="navegacion">
 			<ul>
-				<li>Cuestionario</li>
-				<li> Carreras</li>
+				<li> <a href = "surveys"> Cuestionario </a> </li>
+				<li> <a href = "careers"> Carreras </a> </li>
 			</ul>
-		</nav>
+		</nav-->
 		<header>
 			<figure id="cabecera">
 				<img id="imagen" src="images/cabecera(1).png">
@@ -23,14 +23,12 @@
 		<figure > 
 			<!--img id="imagen" src="images/cabeceraTestVocacional3(2).png"-->
 		</figure>
-		<h3 id="bienvenida">
-			<p>Contanos de vos</p>
-		</h3>
+		<p id ="bienvenida"> <u> Contanos de vos </u></p>
 		<article id="form">
 			<form action='/responses' method='POST'>
-				<ol id="preguntas">
+				<ol >
 					<% @questions.map do |question| %> 
-					<li> 
+					<li id="preguntas"> 
 						<%= question.description %> 
 						<br> 
 						<ul>
@@ -44,17 +42,46 @@
 					</ol>
 					<input type='hidden' name='survey_id' value='<%= @user.id %>'>
 					<p id = "aviso">
-						Recorda que debes seleecionar al menos una opcion de todas las preguntas.
+						<b> Recorda que debes seleecionar al menos una opcion de todas las preguntas.</b>
 					</p>
 					<input type = 'submit' value = 'Enviar respuestas'>
 				</form> 	
 			</article>
-
-			<footer id="contacto">
-				UNRC &copy; 2021
-			</footer>
+			<section >
+				<figure id="bannerVertical">
+					<img id="imagen" src="images/baner_vertical_response.jpg">
+				</figure>
+				<div id= "informacion">
+				<h3 id="tituloCarreras"> 
+					 Algunas de las carreras disponibles:
+					 <br>
+					 <ul id = "informacionCarreras">
+					 	<li> Arquitectura </li>
+					 	<li> Arte </li>
+					 	<li> Computacion </li>
+					 	<li> Economia </li>
+					 	<li> Educacion Fisica </li>
+					 	<li> Filosofia </li>
+					 	<li> Fisica </li>
+					 	<li> Geologia </li>
+					 	<li> Historia </li>
+					 	<li> Literatura </li>
+					 	<li> Matematica </li>
+					 	<li> Medicina </li>
+					 	<p id = "carreras"> <a href="/careers"> Haga click aca para ver todas </a> </p>
+					 </ul> 
+				</h3>
+				</div>
+				<figure id="bannerVertical">
+					<img id="imagen" src="images/bienvenidaResponse.jpg">
+				</figure>
+			</section>
 		</div>
-
+		<div id="contacto">
+			<br>
+				<p> UNRC &copy; 2021 
+				 Realizado por: Molina Enzo Agustin - Luciano Palacio - Alan Arce </p>
+		</div>
 	</body>
 	</html>
 
