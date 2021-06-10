@@ -2,25 +2,38 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Survey</title>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="styles_surveys2.css">
 </head>
-<body>
-	<div id="agrupar">
-		<header id="cabecera">
-			
-		</header>
-		<nav>
-			
+<body >
+	<div>
+		<nav id="navegacion">
+			<ul>
+				<li>Cuestionario</li>
+				<li> Carreras</li>
+			</ul>
 		</nav>
-		<article id="preguntas">
-			<form action="/surveys" method="POST">
-				<input type="text" name="username" value= "Ingrese aqui su nombre">
-				<input type = 'submit' value = 'Aceptar'>
-			</form>	
-		</article>
-		<footer>
-			
-		</footer>
+		<header>
+			<figure id="cabecera">
+				<img id="imagen" src="images/cabecera(1).png">
+			</figure>
+		</header>
 	</div>
-</body>
-</html>
+	<div id="agrupar">
+
+				<h2 id = "descripcion"> ¿Seguís pensando en qué querés estudiar? <br /> ¿No conocés todas las opciones de
+	 			carreras disponibles? <br /> ¡Tenemos lo que necesitás! <br /> una app que te acerca a tu profesión ideal de forma fácil, rápida, ¡y gratis! <h2> <br />
+				<h3 id = "titulo"> Ingrese su nombre para completar el test </h3> <br />
+				<form action="/surveys" method="POST">
+				<label for="username">Username</label>
+				<input type="text" name="username" value= "">
+				<input type = 'submit' value = 'Aceptar'>
+				</form> <br />
+
+			<footer id="contacto">
+				UNRC &copy; 2021
+			</footer>
+		</div>
+
+	</body>
+	</html>
