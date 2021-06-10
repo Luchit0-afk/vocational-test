@@ -1,27 +1,33 @@
 <!DOCTYPE html>
 
 <html lang="es">
-	<head>
-		  <meta charset="utf-8">
-		  <title>Carreras</title>
-		  <link rel="stylesheet" href="styles_careers.css">
-	</head>
-
-	<body>
-		<div class = "cuerpo">
-			<header id = "cabecera">
-				<h1 id = "titulo"> Carreras </h1>
+<head>
+	<meta charset="utf-8">
+	<title>Carreras</title>
+	<link rel="stylesheet" type="text/css" href="styles_careers.css">
+</head>
+<body>
+	<div id="agrupar">
+		<header>
+			<h1 id = "titulo"> Carreras </h1>
 			<aside id = "carreras">
 				<h3 id = "carrerasD"> Carreras disponibles </h3>
-				<ul>
+				<ul id="lista">
 					<% @careers.map do |career| %> 
-					<li id = "lista">
-						<a href = "careers/<%=career.id %>"> <%= career.name %> </a>
-						(<%=career.surveys.count.to_s  %>)
-					</li>
+					<li> <%= career.name %> </a> </li> <br>
 					<% end %>
 				</ul>
 			</aside>
+			<article >
+				<figure  id="bannerVertical">
+					<img width="385" height="100%" src="/images/bannerCarreras.png">
+				</figure>
+			</article>
+			<div id="contacto">
+				<br>
+				<p> UNRC &copy; 2021 
+				Realizado por: Molina Enzo Agustin - Luciano Palacio - Alan Arce </p>
+			</div>
 		</div>
 	</body>
-</html>
+	</html>

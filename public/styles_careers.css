@@ -5,54 +5,77 @@
 
 body {
  	text-align: center;
- 	background: #212F3D ;
- 	color: #FFFFFF;
+ 	background: #f3f3f3;
+ 	color: white;
+
 }
 
-.cuerpo{
-	width: 900px;
-	margin: 15px auto;
+#agrupar{
+	width: 847px;
+	margin-top: 50px;
+	margin-right: auto;
+	margin-left: auto;
+	
 }
 	
 #cabecera {
-	/*background: yellow;*/
-	padding: 25px;
+	/*padding: 25px;*/
+    
 } 
 
 #titulo{
-	/*background: blue;*/
+	background: #3c8dad;
 	font-size: 40px;
 	font-family: sans-serif;
 }
 
-#formulario{
-	/*background: green;*/
-	width: 400px;
-	height:400px;
-	float:left;
-	padding-top: 20px;
-	padding-left: 20px;
-	text-align: left;
-}
-
 #carreras{
-	padding-left: 50px;
 	text-align: left;
-	width: 400px;
-	height:400px;
-	/*background: red;*/
+	background: #88D4F2;
 	float:left;
+	width: 847px;
+	margin-bottom: 10px;
+	color: black;
+	border: black 2px solid;
 }
 
 #carrerasD{
+	padding-left:  30px;
 	font-size: 30px;
 	text-decoration: underline;
+	padding-bottom: 20px;
+	padding-top: 10px;
+	
 }
 
 #lista{
+	padding-left:  30px;
+	/*display: none;*/
+}
+
+#lista li{
 	padding-top:3px;
+	background: #deedf0;
+	list-style: none;
+	border: black 2px solid;
+	margin-right: 400px;
+}
+
+#bannerVertical{
+	position:absolute;
+	margin-left:460px;
+	margin-top:30px;
+	margin-right:100px;
 }
 
 #Icarreras{
 	font-size: 20px;
+}
+
+#contacto{
+	padding: 5px 15px;
+	background: #3498db;
+	color: white;
+	text-align: center;
+	clear: both;
 }
