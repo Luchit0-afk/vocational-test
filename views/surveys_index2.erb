@@ -2,25 +2,17 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Survey</title>
+	<title>Username</title>
+	<link rel="stylesheet" href="styles_surveys2.css">
 </head>
 <body>
-	<div id="agrupar">
-		<header id="cabecera">
-			
-		</header>
-		<nav>
-			
-		</nav>
-		<article id="preguntas">
-			<form action="/surveys" method="POST">
-				<input type="text" name="username" value= "Ingrese aqui su nombre">
-				<input type = 'submit' value = 'Aceptar'>
-			</form>	
-		</article>
-		<footer>
-			
-		</footer>
-	</div>
+	<h2 id = "descripcion"> ¿Seguís pensando en qué querés estudiar? <br /> ¿No conocés todas las opciones de
+	 carreras disponibles? <br /> ¡Tenemos lo que necesitás! <br /> una app que te acerca a tu profesión ideal de forma fácil, rápida, ¡y gratis! <h2> <br />
+	<h3 id = "titulo"> Ingrese su nombre para completar el test </h3> <br />
+	<form action="/surveys" method="POST">
+		<label for="username">Username</label>
+		<input type="text" name="username" value= "">
+		<input type = 'submit' value = 'Aceptar'>
+	</form>
 </body>
 </html>
