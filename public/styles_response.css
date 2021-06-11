@@ -10,7 +10,7 @@
  */
 
 body{
-	background: #E4E7EB;
+	background: #ecf0f1;
 }
 
 #cabecera{
@@ -18,7 +18,7 @@ body{
 }
 
 #agrupar{
-	background: #E4E7EB;
+	background: #ecf0f1;
 	/*font-size: 40px;*/
 	width: 1020px;
 	margin: 45px auto;
