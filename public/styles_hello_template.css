@@ -1,22 +1,11 @@
 {
-     margin: 0px;
-     padding: 0px;
+    margin: 0px;
+    padding: 0px;
 } 
-/*
-body{    
-    background-image: url('images/pexels-photo-3769697.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: scroll;
-    background-color: transparent;
-    background-blend-mode: exclusion;
-}
-*/
 
 body{
     background-color: #ecf0f1;
 }
-
 
 .centralImg{
     width: 20%;
@@ -94,28 +83,3 @@ footer {
     font-size: 150%;
     font-family: times new roman; 
 }
-/*
-
-
-
-h2{
-    text-align: right;
-    color: black;
-    font-size: 200%;
-    font-family: times new roman;
-}
-
-h3{
-    color: black;
-    font-size: 150%;
-}
-
-h4{
-    color: black;
-    font-family: arial;
-}
-
-li{
-    color: black;
-}
-
