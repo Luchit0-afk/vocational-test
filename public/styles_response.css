@@ -123,9 +123,10 @@ body{
 	background: #3498db;
 	color: white;
 	text-align: center;
-	height: 50px;
-	text-align: center;
+	height: 30px;
 	clear: both;
+	text-shadow: 3px 3px 3px #7f8c8d;
+    font-size: 120%;
 }
 
 #imagen{
