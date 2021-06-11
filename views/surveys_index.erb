@@ -1,29 +1,33 @@
 <!DOCTYPE html>
-<html lang="es">
-    <head>
-        <meta charset="utf-8">
-        <title>Cuestionario</title>
-        <link rel="stylesheet" type="text/css" href="/styles_surveys.css" />
-    </head>
-    <body>
-        <div class = "cabecera">
-            <header> 
-                <img id = "imagen" src="https://i.ibb.co/pLxkKtx/portada-2.jpg" > 
-                <h1 id = "titulo"> Bienvenidos al cuestionario </h1> 
-            </header>
-        </div>
-        <div class = "cuerpo">
-            <section>
-                 <h2 id = "TPregunta"> Lista de preguntas: </h2> 
-                <ol>
-                    <% @questions.map do |question| %> 
-                    <li id = "lista">
-                        <%= question.name %> 
-                    </li>
-                    <% end %>
-                </ol>
-            </section> 
-        </div>
-        
-    </body>
-</html> 
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Registrarse</title>
+	<link rel="stylesheet" type="text/css" href="styles_surveys2.css">
+</head>
+<body >
+	<div>
+		<header>
+			<figure id="cabecera">
+				<img id="imagen" src="images/cabecera(1).png">
+			</figure>
+		</header>
+	</div>
+	<div id="agrupar">
+
+				<h2 id = "descripcion"> ¿Seguís pensando en qué querés estudiar? <br /> ¿No conocés todas las opciones de
+	 			carreras disponibles? <br /> ¡Tenemos lo que necesitás! <br /> Una app que te acerca a tu profesión ideal de forma fácil, rápida, ¡y gratis! <h2> <br />
+				<h3 id = "titulo"> Ingrese su nombre para completar el test </h3> <br />
+				<form action="/surveys" method="POST">
+				<label for="username">Username</label>
+				<input required type="text" name="username" value= "">
+				<input type = 'submit' value = 'Aceptar'>
+				</form> <br />
+		</div>
+		<div id="contacto">
+			<br>
+			<p> UNRC &copy; 2021 
+			Realizado por: Molina Enzo Agustin - Luciano Palacio - Alan Arce </p>
+		</div>
+	</body>
+	</html>

@@ -78,7 +78,7 @@ class App < Sinatra::Base
   get '/surveys' do
     @survey = Survey.new(username: params[:username])
 
-    erb :surveys_index2
+    erb :surveys_index
   end
 
   post "/surveys" do
@@ -86,7 +86,7 @@ class App < Sinatra::Base
      
      if @user.save
       @questions = Question.all
-      erb :response_index2
+      erb :response_index
     else
       [500, {}, 'Internal Server Error']
     end
@@ -116,6 +116,8 @@ class App < Sinatra::Base
     resCareer = res.key(res.values.max)
     @career = Career.find(id: resCareer)
 
+    @usuario.update(career_id: @career.id)
+    
     erb :outcomes_index
   end
 
