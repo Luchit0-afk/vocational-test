@@ -1,34 +1,34 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="styles_response.css">
-</head>
-<body >
-	<div>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="styles_response.css">
+	</head>
+	<body >
+		<div>
 		<!--nav id="navegacion">
 			<ul>
 				<li> <a href = "surveys"> Cuestionario </a> </li>
 				<li> <a href = "careers"> Carreras </a> </li>
 			</ul>
 		</nav-->
-		<header>
-			<figure id="cabecera">
-				<img id="imagen" src="images/cabecera(1).png">
-			</figure>
-		</header>
-	</div>
-	<div id="agrupar">
-		<figure > 
+			<header>
+				<figure id="cabecera">
+					<img id="imagen" src="images/cabecera(1).png">
+				</figure>
+			</header>
+		</div>
+		<div id="agrupar">
+			<figure > 
 			<!--img id="imagen" src="images/cabeceraTestVocacional3(2).png"-->
-		</figure>
-		<p id ="bienvenida"> <u> Contanos de vos </u></p>
-		<article id="form">
-			<form action='/responses' method='POST'>
-				<ol >
-					<% @questions.map do |question| %> 
-					<li id="preguntas"> 
+			</figure>
+			<p id ="bienvenida"> <u> Contanos de vos </u></p>
+			<article id="form">
+				<form action='/responses' method='POST'>
+					<ol >
+						<% @questions.map do |question| %> 
+						<li id="preguntas"> 
 						<%= question.description %> 
 						<br> 
 						<ul>
@@ -52,27 +52,27 @@
 					<img id="imagen" src="images/baner_vertical_response.jpg">
 				</figure>
 				<div id= "informacion">
-				<h3 id="tituloCarreras"> 
-					 Algunas de las carreras disponibles:
-					 <br>
-					 <ul id = "informacionCarreras">
-					 	<li> Arquitectura </li>
-					 	<li> Arte </li>
-					 	<li> Computacion </li>
-					 	<li> Economia </li>
-					 	<li> Educacion Fisica </li>
-					 	<li> Filosofia </li>
-					 	<li> Fisica </li>
-					 	<li> Geologia </li>
-					 	<li> Historia </li>
-					 	<li> Literatura </li>
-					 	<li> Matematica </li>
-					 	<li> Medicina </li>
-					 	<li> Periodismo </li>
-					 	<li> Quimica </li>
-					 	<p id = "carreras"> <a href="/careers"> Haga click aca para ver todas </a> </p>
-					 </ul> 
-				</h3>
+					<h3 id="tituloCarreras"> 
+						Algunas de las carreras disponibles:
+						<br>
+						<ul id = "informacionCarreras">
+						  	<li> Arquitectura </li>
+						 	<li> Arte </li>
+						 	<li> Computacion </li>
+						 	<li> Economia </li>
+						 	<li> Educacion Fisica </li>
+						 	<li> Filosofia </li>
+						 	<li> Fisica </li>
+						 	<li> Geologia </li>
+						 	<li> Historia </li>
+						 	<li> Literatura </li>
+						 	<li> Matematica </li>
+						 	<li> Medicina </li>
+					 		<li> Periodismo </li>
+					 		<li> Quimica </li>
+					 		<p id = "carreras"> <a href="/careers"> Haga click aca para ver todas </a> </p>
+						</ul> 
+					</h3>
 				</div>
 				<figure id="bannerVertical">
 					<img id="imagen" src="images/bienvenidaResponse.jpg">
@@ -83,5 +83,5 @@
 			UNRC &copy; 2021 Alan Arce - Molina Enzo Agustin - Palacio Luciano
 		</div>
 	</body>
-	</html>
+</html>
 

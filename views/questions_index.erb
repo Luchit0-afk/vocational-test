@@ -1,9 +1,6 @@
 <!DOCTYPE html>  
 	
 <title> Preguntas </title>
-
-
-
 <form action = '/questions' method = 'POST'>
 	<font color="white">
 	<h4> Pregunta: <input type='name' name= 'question[name]'/></h4>
@@ -12,9 +9,7 @@
 	</font>
 	<input type = 'submit' value = 'Aceptar'/>
 </form>
-
 <ul>
-
 	<% @questions.map do |question| %> 
 	<li>
 		<a href = "questions/<%=question.id %>"> <%= question.name %>  (<%= question.description.to_s %>)
