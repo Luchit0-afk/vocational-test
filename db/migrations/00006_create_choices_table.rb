@@ -3,7 +3,7 @@ Sequel.migration do
     create_table(:choices) do
       primary_key   :id
       String        :text
-      foreign_key   :question_id,    :questions
+      foreign_key   :question_id,  :questions
       DateTime      :created_at,   default: Sequel::CURRENT_TIMESTAMP
       DateTime      :updated_at,   default: Sequel::CURRENT_TIMESTAMP
     end

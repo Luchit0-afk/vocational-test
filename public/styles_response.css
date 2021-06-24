@@ -2,13 +2,6 @@
 	margin :0px;
 }
 
-/*#agrupar {
-	 width: 1020px;
-	 margin: 25px auto;
-	 text-align: left;
-}
- */
-
 body{
 	background: #ecf0f1;
 }
@@ -19,21 +12,16 @@ body{
 
 #agrupar{
 	background: #ecf0f1;
-	/*font-size: 40px;*/
 	width: 1020px;
 	margin: 45px auto;
 	text-align: left;
 }
 
 #navegacion li{
-
 	display: inline-block;
 	background: #CCCC;
 	font-size: 27px;
 	padding: 5px 15px;
-	/*border-color: yellow;
-	border-width: 10px;
-	*/
 	margin-right:  30px;
 	margin-left: 0px;
 	font: bold 24px verdana, sans-serif;
@@ -46,10 +34,6 @@ body{
 }
 
 #bienvenida {
-	/*margin-left: 15px;
-	margin-top: 15px;
-	margin-bottom: 15px;
-	*/
 	padding: 5px 15px;
 	font-size: 30px;
 	background: #47597e;
@@ -87,11 +71,8 @@ body{
 	margin-bottom: 0px;
 }
 
-
-
 #informacion {
 	background: #8383e3;
-	/*padding-bottom: 42%;*/
 	width: 235px;
 	margin: 0px;
 	text-align:center;
@@ -110,7 +91,6 @@ body{
 	padding-bottom: 16px;
 	font-size:23px
 }
-
 
 #carreras {
 	margin-top: 10px;
