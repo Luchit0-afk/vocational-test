@@ -87,6 +87,7 @@ class App < Sinatra::Base
      if @user.save
       @questions = Question.all
       erb :response_index
+
     else
       [500, {}, 'Internal Server Error']
     end
@@ -96,8 +97,8 @@ class App < Sinatra::Base
     @usuario = Survey.find(id: params[:survey_id])
 
     params[:question_id].each do |question_id|
-      r = Response.new(choice_id: params[:"#{question_id}"], survey_id: @usuario.id, question_id: question_id)
-      r.save
+      resAct = Response.new(survey_id: @usuario.id, question_id: question_id,choice_id: params[:"#{question_id}"])
+      resAct.save
     end
     
     res = {}
@@ -107,8 +108,8 @@ class App < Sinatra::Base
     end
       
     for response in @usuario.responses
-      c = Choice.find(id: response.choice_id)
-      for outcome in c.outcomes
+      choice = Choice.find(id: response.choice_id)
+      for outcome in choice.outcomes
         res[outcome.career_id] = res[outcome.career_id] + 1
       end
     end
