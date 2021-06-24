@@ -17,11 +17,6 @@ body {
 	margin-left: auto;
 	
 }
-	
-#cabecera {
-	/*padding: 25px;*/
-    
-} 
 
 #titulo{
 	background: #3c8dad;
@@ -50,7 +45,6 @@ body {
 
 #lista{
 	padding-left:  30px;
-	/*display: none;*/
 }
 
 #lista li{
