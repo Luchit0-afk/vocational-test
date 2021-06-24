@@ -54,10 +54,6 @@ body{
 	background: #E4E7EB;
 }
 
-#cabecera{
-	
-}
-
 #agrupar{
 	background: #ecf0f1;
 	/*font-size: 40px;*/
@@ -80,4 +76,8 @@ body{
 
 #imagen{
 	width: 100%;
+}
+
+#descripcion{
+	font-style:italic;
 }

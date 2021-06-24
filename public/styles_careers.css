@@ -74,3 +74,10 @@ body {
 	text-align: center;
 	clear: both;
 }
+
+#volver{
+	font-size: 17px;
+	font-style:italic;
+	color: black;
+	text-align: left;
+}
