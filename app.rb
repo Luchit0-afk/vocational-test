@@ -26,20 +26,6 @@ class App < Sinatra::Base
     erb :careers_index
   end
 
-  post "/careersAdmin" do
-    career = Career.new(name: params[:name])
-
-    career.save
-    
-    redirect "/careersAdmin"
-  end
-
-  get '/careersAdmin' do
-    @careers = Career.all
-
-    erb :careersAdmin_index
-  end
-
   post "/posts" do
     request.body.rewind 
     data = JSON.parse request.body.read
