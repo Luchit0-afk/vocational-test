@@ -16,4 +16,3 @@ group :test do
   gem 'minitest-color'
   gem 'rack-test'
 end
-

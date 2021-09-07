@@ -1,8 +1,8 @@
 #Clean dataSet
-Career.all.map   { |c| c.destroy }
-Question.all.map { |q| q.destroy }
-Choice.all.map   { |e| e.destroy }
-Outcome.all.map  { |o| o.destroy }
+#Career.all.map   { |c| c.destroy }
+#Question.all.map { |q| q.destroy }
+#Choice.all.map   { |e| e.destroy }
+#Outcome.all.map  { |o| o.destroy }
 
 # Careers
 Agronomia = Career.create(name: 'Agronomia')
