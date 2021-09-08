@@ -19,4 +19,10 @@ class CareerTest < MiniTest::Unit::TestCase
     assert_equal(career.surveys.count, 3)
   end
 
+  def correctly_written_careers
+    career1 = Career.create(name: '')
+    career2 = Career.create(name: nil)
+
+    assert_equal(career1.valid?,false)
+    assert_equal(career2.valid?,false)
 end
