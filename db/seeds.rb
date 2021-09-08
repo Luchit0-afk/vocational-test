@@ -1,8 +1,9 @@
 #Clean dataSet
-#Career.all.map   { |c| c.destroy }
-#Question.all.map { |q| q.destroy }
-#Choice.all.map   { |e| e.destroy }
-#Outcome.all.map  { |o| o.destroy }
+Outcome.all.map  { |o| o.destroy }
+Career.all.map   { |c| c.destroy }
+Choice.all.map   { |e| e.destroy }
+Question.all.map { |q| q.destroy }
+
 
 # Careers
 Agronomia = Career.create(name: 'Agronomia')
@@ -15,7 +16,7 @@ Filosofia = Career.create(name: 'Filosofía')
 Fisica = Career.create(name: 'Fisica')
 Geologia = Career.create(name: 'Geología')
 Historia = Career.create(name: 'Historia')
-Literaruta = Career.create(name: 'Literaruta')
+Literaruta = Career.create(name: 'Literatura')
 Matematicas = Career.create(name: 'Matemáticas')
 Medicina = Career.create(name: 'Medicina')
 Periodismo = Career.create(name: 'Periodismo')
