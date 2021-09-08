@@ -10,16 +10,19 @@
 			<h2> La carrera recomendada para vos es: </h2>
 		</div>
 		<h1> <%= @career.name %> <br> </h1>
-		<div class="home">
-			<ul>
-			    <li> <h2> Si desea volver al menu principal haga <a href="/"> clic aqui </a> </h2> </li>
-			</ul>
-		</div>
-		<div class="carreras">
-			<ul>
-				<li> <h2> Si desea ver la lista de carreras disponibles haga <a href="careers"> clic aqui </a> </h2> </li>
-			</ul>
-		</div>
+		<div class="centerLeft">
+            <h5> Volver a la pagina <br> de inicio: </h5> 
+            <a href="/"> Home <br> <img src="images/home_icon.svg" width="50"> </a>
+        </div>
+        <div class="centerRight">
+            <h5> Ver las carreras <br> disponibles: </h5>
+            <a href="careers"> Carreras <img src="images/278.svg" width="50"> </a> 
+        </div>
+        <div class="center">
+            <h5> Ir a pagina oficial <br> de la UNRC: </h5>
+            <a href="https://www.unrc.edu.ar/" target="_blank"> UNRC <img src="images/unrc.svg" width="72"> </a> 
+        </div>
+
 	</body> 
 	<footer>
 		UNRC &copy; 2021 Alan Arce - Molina Enzo Agustin - Palacio Luciano
