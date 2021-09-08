@@ -80,30 +80,30 @@ class App < Sinatra::Base
   end
 
   post '/responses' do
-    @usuario = Survey.find(id: params[:survey_id])
+    @survey = Survey.find(id: params[:survey_id])
 
     params[:question_id].each do |question_id|
-      resAct = Response.new(survey_id: @usuario.id, question_id: question_id,choice_id: params[:"#{question_id}"])
-      resAct.save
+      response = Response.new(survey_id: @survey.id, question_id: question_id,choice_id: params[:"#{question_id}"])
+      response.save
     end
     
-    res = {}
+    table = {}
 
     for career in Career.all
-      res[career.id] = 0
+      table[career.id] = 0
     end
       
-    for response in @usuario.responses
+    for response in @survey.responses
       choice = Choice.find(id: response.choice_id)
       for outcome in choice.outcomes
-        res[outcome.career_id] = res[outcome.career_id] + 1
+        table[outcome.career_id] += 1
       end
     end
 
-    resCareer = res.key(res.values.max)
-    @career = Career.find(id: resCareer)
+    career = table.key(table.values.max)
+    @career = Career.find(id: career)
 
-    @usuario.update(career_id: @career.id)
+    @survey.update(career_id: @career.id)
     
     erb :outcomes_index
   end
