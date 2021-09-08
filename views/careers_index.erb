@@ -11,9 +11,74 @@
 			<aside id = "carreras">
 				<h3 id = "carrerasD"> Carreras disponibles </h3>
 				<ul id="lista">
-					<% @careers.map do |career| %> 
-					<li> <%= career.name %> </a> </li> <br>
+					<!--% 
+					link = ""
+					agronomia = "https://www.unrc.edu.ar/unrc/carreras/ayv_ingenieria_agronomica.htm"%-->	
+					<!--%@careers.map do |career| %--> 
+					<!--li-->
+					<!--%= if career.name == "Agronomia" then link = agronomia end %--><!--a href="/"--> <!--%career.name%-->
+					
+					<% @careers.map do |career| %>
+						<%
+							link = ""
+							agronomia = "https://www.unrc.edu.ar/unrc/carreras/ayv_ingenieria_agronomica.htm"
+							computacion = "https://www.unrc.edu.ar/unrc/carreras/exa_lic_ciencias_computacion.php"
+							economia = "https://www.unrc.edu.ar/unrc/carreras/eco_lic_economia.htm"
+							edFisica = "https://www.unrc.edu.ar/unrc/carreras/hum_prof_educacion_fisica.php"
+							filosofia = "https://www.unrc.edu.ar/unrc/carreras/hum_lic_en_filosofia.php"
+							fisica = "https://www.unrc.edu.ar/unrc/carreras/exa_prof_fisica.php"
+							geologia = "https://www.unrc.edu.ar/unrc/carreras/exa_lic_geologia.php"
+							historia = "https://www.unrc.edu.ar/unrc/carreras/hum_lic_historia.php"
+							literatura = "https://www.unrc.edu.ar/unrc/carreras/ProgAsig5.php?n=%2FBpLfBDYxXmQaxDePIM%2Bvqvf5cLyAysalAWtwPjvud4%3D"
+							matematica = "https://www.unrc.edu.ar/unrc/carreras/exa_lic_matematica.php"
+							medicina = "https://fcm.unc.edu.ar/"
+							periodismo = "https://www.unrc.edu.ar/unrc/carreras/hum_comunicacion_social.php"
+							quimica = "https://www.unrc.edu.ar/unrc/carreras/exa_lic_quimica.php"
+							sociologia = "https://sociales.unc.edu.ar/licenciaturasociologia"
+							veterinaria = "https://www.unrc.edu.ar/unrc/carreras/ayv_medicina_veterinaria.htm"
+							arquitectura = "https://faud.unc.edu.ar/carrera-de-arquitectura/"
+							arte = "https://artes.unc.edu.ar/"
+							if career.name.to_s == "Agronomia" then
+								link = agronomia
+							elsif career.name.to_s == "Arquitectura" then
+								link = arquitectura
+							elsif career.name.to_s == "Arte" then
+								link = arte
+							elsif career.name.to_s == "Computación" then
+								link = computacion
+							elsif career.name.to_s == "Economía" then
+								link = economia
+							elsif career.name.to_s == "Educacion Fisica" then
+								link = edFisica
+							elsif career.name.to_s == "Filosofía" then
+								link = filosofia
+							elsif career.name.to_s == "Fisica" then
+								link = fisica
+							elsif career.name.to_s == "Geología" then
+								link = geologia
+							elsif career.name.to_s == "Historia" then
+								link = historia
+							elsif career.name.to_s == "Literatura" then
+								link = literatura
+							elsif career.name.to_s == "Matemáticas" then
+								link = matematica
+							elsif career.name.to_s == "Medicina" then
+								link = medicina
+							elsif career.name.to_s == "Periodismo" then
+								link = periodismo
+							elsif career.name.to_s == "Química" then
+								link = quimica
+							elsif career.name.to_s == "Sociología" then
+								link = sociologia
+							elsif career.name.to_s == "Veterinaria" then
+								link = veterinaria
+							end
+						%> 
+						<li> 
+							<a href = <%=link%> target="_blank" > <%= career.name %> </a>
+						</li>
 					<% end %>
+
 				</ul>
 				<img id = "bannerVertical"src="/images/bannerCarreras.png">
 			</aside>

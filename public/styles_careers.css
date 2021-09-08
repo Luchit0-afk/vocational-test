@@ -55,6 +55,7 @@ body {
 	display: inline-block;
 	width: 50%;
 	margin-bottom: 12px;
+
 }
 
 #bannerVertical{
@@ -84,3 +85,7 @@ body {
 	color: black;
 	text-align: left;
 }
+a{
+	text-decoration: none;
+	color: black;
+}	
