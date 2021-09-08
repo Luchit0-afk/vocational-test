@@ -35,7 +35,7 @@ h1{
     position: relative;
     top: 100px;
     bottom: 100px;
-    right: 100px;
+    right: 190px;
     width: 200px;
     height: 200px;
 }
@@ -48,7 +48,20 @@ h1{
     position: relative;
     top: -126px;
     bottom: 100px;
-    right: -100px;
+    right: -190px;
+    width: 200px;
+    height: 200px;
+}
+
+.centerCenter{
+    text-align: center;
+    margin: auto;
+    border: 3px solid transparent;
+    padding: 10px;
+    position: relative;
+    top: -350px;
+    bottom: 100px;
+    right: 0px;
     width: 200px;
     height: 200px;
 }
