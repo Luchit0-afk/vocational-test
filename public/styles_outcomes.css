@@ -28,23 +28,6 @@ h1{
     font-size: 300%;
     font-family: times new roman; 
 }
-/*
-.carreras{
-    text-align: center;
-    position: absolute;
-    top: 70%;
-    left: 0%;
-    font-style: italic;
-}
-
-.home{
-    text-align: center;
-    position: absolute;
-    top: 75%;
-    left: 0%;
-    font-style: italic;
-}
-*/
 
 .centerLeft{
     text-align: center;
@@ -83,6 +66,17 @@ h1{
     right: 0px;
     width: 200px;
     height: 200px;
+}
+
+.centerTop{
+    text-align: center;
+    margin: auto;
+    border: 3px solid transparent;
+    padding: 10px;
+    position: relative;
+    top: 150px;
+    bottom: 100px;
+    width: 200px;
 }
 
 a{

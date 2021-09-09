@@ -4,7 +4,7 @@ class QuestionTest < MiniTest::Unit::TestCase
   MiniTest::Unit::TestCase
   def test_question_to_has_choice
     # Arrange
-    question = Question.create(name: "question1", description: "para reflexionar sobre objetivos personales", number: 1, type: "reflexiva")
+    question = Question.create(name: 'question1', description: 'para reflexionar sobre objetivos personales', number: 1, type: 'reflexiva')
     
     # Act
     Choice.create(text: String)
