@@ -98,17 +98,21 @@ body{
 	text-align: center;
 }
 
-#contacto{
-	padding: 5px 15px;
-	background: #3498db;
-	color: white;
-	text-align: center;
-	height: 30px;
-	clear: both;
-	text-shadow: 3px 3px 3px #7f8c8d;
-    font-size: 120%;
-}
-
 #imagen{
 	width: 100%;
+}
+
+footer{
+    background-color: #3498db;
+    padding: 10px 10px;
+    position: fixed;
+    left:0px;
+    bottom:0px;
+    height:30px;
+    width:100%;
+    text-align: center;
+    text-shadow: 3px 3px 3px #7f8c8d;
+    color: white;
+    font-size: 120%;
+    font-family: times new roman; 
 }

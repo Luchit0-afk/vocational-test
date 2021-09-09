@@ -70,14 +70,6 @@ body {
 	font-size: 20px;
 }
 
-#contacto{
-	padding: 5px 15px;
-	background: #3498db;
-	color: white;
-	text-align: center;
-	clear: both;
-}
-
 #volver{
 	clear: both;
 	font-size: 17px;
@@ -89,3 +81,18 @@ a{
 	text-decoration: none;
 	color: black;
 }	
+
+footer{
+    background-color: #3498db;
+    padding: 10px 10px;
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:30px;
+    width:100%;
+    text-align: center;
+    text-shadow: 3px 3px 3px #7f8c8d;
+    color: white;
+    font-size: 120%;
+    font-family: times new roman; 
+}
