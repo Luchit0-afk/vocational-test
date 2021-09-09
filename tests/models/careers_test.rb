@@ -25,4 +25,5 @@ class CareerTest < MiniTest::Unit::TestCase
 
     assert_equal(career1.valid?,false)
     assert_equal(career2.valid?,false)
+  end
 end
