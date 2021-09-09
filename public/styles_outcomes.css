@@ -27,6 +27,7 @@ h1{
     color: black;
     font-size: 300%;
     font-family: times new roman; 
+    background-color: black;
 }
 
 .centerLeft{
@@ -79,7 +80,7 @@ h1{
     width: 200px;
 }
 
-a{
+.ref{
     margin: auto;
     position: absolute;
     background-color: #3498db;
@@ -93,6 +94,11 @@ a{
     box-shadow: 3px 3px 3px #7f8c8d;
     width: 100px;
     right: 60px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
 }
 
 footer{
