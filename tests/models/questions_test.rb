@@ -4,14 +4,13 @@ class QuestionTest < MiniTest::Unit::TestCase
   MiniTest::Unit::TestCase
   def test_question_to_has_choice
     # Arrange
-    question = Question.create(name: 'question1', description: 'para reflexionar sobre objetivos personales', number: 1, type: 'reflexiva')
+    question = Question.create(name: 'Q1', description: 'Me trasladaría a una zona agrícola - ganadera para ejercer mi profesión.',number: 1,type: 'Multiple-Choice')
     
     # Act
-    Choice.create(text: String)
-    Choice.create(text: String)
-    Choice.create(text: String)
+    Choice.create(text: 'Si' , question: Q1)
+    Choice.create(text: 'No' , question: Q1)
     
     # Assert
-    assert_equal(question.choices.count, 3)
+    assert_equal(question.choices.count, 2)
   end
 end
