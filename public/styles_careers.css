@@ -70,13 +70,6 @@ body {
 	font-size: 20px;
 }
 
-#volver{
-	clear: both;
-	font-size: 17px;
-	font-style:italic;
-	color: black;
-	text-align: left;
-}
 a{
 	text-decoration: none;
 	color: black;
@@ -95,4 +88,15 @@ footer{
     color: white;
     font-size: 120%;
     font-family: times new roman; 
+}
+
+.boton {
+border: 1px solid #2e518b;
+padding: 10px;
+background-color: #2e518b;
+color: #ffffff;
+text-decoration: none;
+text-transform: uppercase;
+font-family: 'Helvetica', sans-serif;
+border-radius: 50px;
 }
