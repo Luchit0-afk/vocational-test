@@ -103,9 +103,10 @@ body{
 }
 
 footer{
+	clear: both;
+	position:static;
     background-color: #3498db;
     padding: 10px 10px;
-    position: fixed;
     left:0px;
     bottom:0px;
     height:30px;
@@ -118,14 +119,14 @@ footer{
 }
 
 .boton {
-border: 1px solid #2e518b;
-padding: 10px;
-background-color: #2e518b;
-color: #ffffff;
-text-decoration: none;
-text-transform: uppercase;
-font-family: 'Helvetica', sans-serif;
-border-radius: 50px;
-position: absolute;
-top: 315%;
+	border: 1px solid #2e518b;
+	padding: 10px;
+	background-color: #2e518b;
+	color: #ffffff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: 'Helvetica', sans-serif;
+	border-radius: 50px;
+	position: absolute;
+	top: 315%;
 }
