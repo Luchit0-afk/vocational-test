@@ -10,8 +10,12 @@
 		<%=@fecha1 %>
     	<%=@fecha2 %>
     	<%=@cant %>
-
-
 	</p>
+
+	<h1> 
+		Desde el <%=@fecha1.mday%>-<%=@fecha1.month%>-<%=@fecha1.year%> hasta <%=@fecha2.mday%>-<%=@fecha2.month%>-<%=@fecha2.year%> la carrera <%= @carrera.name %> fue elegida <%=@cant %> veces.
+	</h1>
+	<br>
+
 </body>
 </html>
