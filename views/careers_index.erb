@@ -80,7 +80,7 @@
 			<a class="boton" href="http://localhost:9292">Volver al menu principal</a>
 			<div style="clear:both">
 				<p id="tituloEncuesta">¿Desea conocer la cantidad de encuestas resultantes de una carrera en un rango de fechas? </p>
-				<form>
+				<form action="/quantities" method="POST">
 					<label>Ingrese la fecha inicial</label>
 					<input type="text" name="fecha1">
 					<br>
@@ -94,6 +94,8 @@
 							</option>
 						<% end %>
 					</select>
+					<br>
+					<input type = 'submit' value = 'Enviar'>
 				</form>
 			</div>	
 		</div>
