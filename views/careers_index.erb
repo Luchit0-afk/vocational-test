@@ -82,10 +82,10 @@
 				<p id="tituloEncuesta">¿Desea conocer la cantidad de encuestas resultantes de una carrera en un rango de fechas? </p>
 				<form action="/quantities" method="POST">
 					<label>Ingrese la fecha inicial</label>
-					<input type="text" name="fecha1">
+					<input type="date" name="fecha1">
 					<br>
 					<label>Ingrese la fecha final</label>
-					<input type="text" name="fecha2">
+					<input type="date" name="fecha2">
 					<br>
 					<select name="carrera">
 						<% @careers.map do |career| %>
