@@ -5,17 +5,35 @@
 	<title> Queantities </title>
 </head>
 <body>
-	<p> 
-		<%= @carrera.name %> 
-		<%=@fecha1 %>
-    	<%=@fecha2 %>
-    	<%=@cant %>
-	</p>
-
-	<h1> 
-		Desde el <%=@fecha1.mday%>-<%=@fecha1.month%>-<%=@fecha1.year%> hasta <%=@fecha2.mday%>-<%=@fecha2.month%>-<%=@fecha2.year%> la carrera <%= @carrera.name %> fue elegida <%=@cant %> veces.
-	</h1>
-	<br>
-
+	<div id = "agrupar">
+		<p id="information"> 
+			Desde el <%=@fechaInicial.day%>-<%=@fechaInicial.month%>-<%=@fechaInicial.year%> hasta 
+			<%=@fechaFinal.day%>-<%=@fechaFinal.month%>-<%=@fechaFinal.year%> la carrera <%= @carrera.name
+			%> fue elegida <%=@cant %> veces.
+		</p>
+		<div id ="Encuesta" style="clear:both">
+				<p id="tituloEncuesta">¿Desea conocer la cantidad de encuestas resultantes de alguna otra carrera carrera? </p>
+				<form action="/quantities" method="POST">
+					<label>Ingrese la fecha inicial</label>
+					<input type="date" name="fecha1">
+					<br>
+					<label>Ingrese la fecha final</label>
+					<input type="date" name="fecha2">
+					<br>
+					<select name="carrera">
+						<% @careers.map do |career| %>
+							<option value="<%= career.name %>"> 
+								<%= career.name %>
+							</option>
+						<% end %>
+					</select>
+					<br>
+					<input type = 'submit' value = 'Enviar'>
+				</form>
+			</div>
+	</div>
+	<footer>
+			UNRC &copy; 2021 Arce Alan - Molina Enzo Agustin - Palacio Luciano
+	</footer>
 </body>
 </html>
