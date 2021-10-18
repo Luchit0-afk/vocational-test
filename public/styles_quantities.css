@@ -1,0 +1,112 @@
+{
+    margin: 0px;
+    padding: 0px;
+} 
+
+body{
+    background-color: #ecf0f1;
+}
+
+#agrupar{
+    background: #ecf0f1;
+    width: 300px;
+    margin: 45px auto;
+    text-align: left;
+}
+
+#information{
+    text-align: center;
+    position: relative;
+    font-style: italic;
+    font-size: 190%;
+}
+
+#tituloEncuesta{
+    font-style:italic;
+    font-size: 150%;
+    text-align: center;
+}
+
+form input[type="submit"]{
+    width:100%;
+    padding:8px 16px;
+    margin-top:32px;
+    border:1px solid #000;
+    border-radius:5px;
+    display:block;
+    color:#fff;
+    background-color:#000;
+}
+
+form input[type="submit"]:hover{
+    cursor:pointer;
+}
+
+
+input[type=date] {
+  height: 35px;
+  margin: 0 auto;
+  width: 100%;
+  font-family: arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #959595;
+  outline: none;
+  border: 0;
+  border-radius: 3px;
+  padding: 0 3px;
+  color: #fff;
+}
+
+form{
+    width:300px;
+    padding:16px;
+    border-radius:10px;
+    margin:auto;
+    background-color:#ccc;
+}
+
+form label{
+    width:100px;
+    font-weight:bold;
+    display:inline;
+    font-size: 20px;
+}
+
+#carreras {
+    font-size: 14px;
+    font-weight: bold !important;
+    color: #fff !important;
+    background: #959595 !important;
+    text-transform: uppercase;
+}
+
+#carreras { 
+    width:50%;
+    padding:8px 10px;
+    margin-top:12px;
+    border:1px solid #000;
+    border-radius:5px;
+    display:block;
+    color:#fff;
+    background-color:#959595;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+footer{
+    clear: both;
+    position:static;
+    background-color: #3498db;
+    padding: 10px 10px;
+    left:0px;
+    bottom:0px;
+    height:30px;
+    width:100%;
+    text-align: center;
+    text-shadow: 3px 3px 3px #7f8c8d;
+    color: white;
+    font-size: 120%;
+    font-family: times new roman; 
+}

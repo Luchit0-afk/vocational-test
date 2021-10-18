@@ -76,18 +76,19 @@
 				<br>
 			<br>
 			<br>
-			</aside>	
-			<a class="boton" href="http://localhost:9292">Volver al menu principal</a>
+			</aside>
 			<div id ="Encuesta">
 				<p id="tituloEncuesta">¿Desea conocer la cantidad de encuestas resultantes de una carrera en un rango de fechas? </p>
 				<form action="/quantities" method="POST">
 					<label>Ingrese la fecha inicial</label>
 					<input type="date" name="fecha1" value=<%= Time.now%>>
 					<br>
+					<br>
 					<label>Ingrese la fecha final</label>
 					<input type="date" name="fecha2" value=<%= Time.now%>>
 					<br>
-					<select name="carrera">
+					<br>
+					<select id="careers" name="carrera">
 						<% @careers.map do |career| %>
 							<option value="<%= career.name %>"> 
 								<%= career.name %>
@@ -97,7 +98,8 @@
 					<br>
 					<input type = 'submit' value = 'Enviar'>
 				</form>
-			</div>	
+			</div>
+			<a class="boton" href="http://localhost:9292">Volver al menu principal</a>
 		</div>
 		<footer>
 			UNRC &copy; 2021 Arce Alan - Molina Enzo Agustin - Palacio Luciano
