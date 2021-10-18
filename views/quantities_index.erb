@@ -1,25 +1,43 @@
 <!DOCTYPE html>
 <html>
-	<body>
-		<div id ="Encuesta" style="clear:both">
-		<p id="tituloEncuesta">¿Desea conocer la cantidad de encuestas resultantes de una carrera en un rango de fechas? </p>
-			<form action="/quantities" method="POST">
-				<label>Ingrese la fecha inicial</label>
-				<input type="text" name="fecha1">
-				<br>
-				<label>Ingrese la fecha final</label>
-				<input type="text" name="fecha2">
-				<br>
-				<select name="carrera">
-    				<% @careers.map do |career| %>
-					<option value="<%= career.name %>"> 
-						<%= career.name %>
-					</option>
-					<% end %>
-				</select>
-				<br>
-				<input type = 'submit' value = 'Enviar'>
-			</form>
-		</div>
-	</body>
+<head>
+	<meta charset="utf-8">
+	<title> Queantities </title>
+	<link rel="stylesheet" type="text/css" href="styles_quantities.css">
+</head>
+<body>
+		<p id="information"> 
+			Desde el <%=@initialDate.day%>-<%=@initialDate.month%>-<%=@initialDate.year%> hasta 
+			<%=@finalDate.day%>-<%=@finalDate.month%>-<%=@finalDate.year%> la carrera <%= @career.name
+			%> fue elegida <%=@cant %> veces.
+		</p>
+		<div id = "agrupar">
+		<div id ="Encuesta">
+				<p id="tituloEncuesta">¿Desea conocer la cantidad de encuestas resultantes de alguna otra carrera? </p>
+				<form action="/quantities" method="POST">
+					<label>Ingrese la fecha inicial</label>
+					<input type="date" name="fecha1" value=<%= Time.now%>>
+					<br>
+					<br>
+					<label>Ingrese la fecha final</label>
+					<input type="date" name="fecha2" value=<%= Time.now%>>
+					<br>
+					<br>
+					<select id="carreras" name="carrera">
+						<% @careers.map do |career| %>
+							<option value="<%= career.name %>"> 
+								<%= career.name %>
+							</option>
+						<% end %>
+					</select>
+					<br>
+					<input type = 'submit' value = 'Enviar'>
+				</form>
+			</div>
+			<%= @arr %>
+	</div>
+	<footer>
+			UNRC &copy; 2021 Arce Alan - Molina Enzo Agustin - Palacio Luciano
+	</footer>
+</body>
 </html>

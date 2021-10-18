@@ -11,13 +11,6 @@
 			<aside id = "carreras">
 				<h3 id = "carrerasD"> Carreras disponibles </h3>
 				<ul id="lista">
-					<!--% 
-					link = ""
-					agronomia = "https://www.unrc.edu.ar/unrc/carreras/ayv_ingenieria_agronomica.htm"%-->	
-					<!--%@careers.map do |career| %--> 
-					<!--li-->
-					<!--%= if career.name == "Agronomia" then link = agronomia end %--><!--a href="/"--> <!--%career.name%-->
-					
 					<% @careers.map do |career| %>
 						<%
 							link = ""
@@ -84,9 +77,29 @@
 			<br>
 			<br>
 			</aside>
+			<div id ="Encuesta">
+				<p id="tituloEncuesta">¿Desea conocer la cantidad de encuestas resultantes de una carrera en un rango de fechas? </p>
+				<form action="/quantities" method="POST">
+					<label>Ingrese la fecha inicial</label>
+					<input type="date" name="fecha1" value=<%= Time.now%>>
+					<br>
+					<br>
+					<label>Ingrese la fecha final</label>
+					<input type="date" name="fecha2" value=<%= Time.now%>>
+					<br>
+					<br>
+					<select id="careers" name="carrera">
+						<% @careers.map do |career| %>
+							<option value="<%= career.name %>"> 
+								<%= career.name %>
+							</option>
+						<% end %>
+					</select>
+					<br>
+					<input type = 'submit' value = 'Enviar'>
+				</form>
+			</div>
 			<a class="boton" href="http://localhost:9292">Volver al menu principal</a>
-			<br>
-			<br>	
 		</div>
 		<footer>
 			UNRC &copy; 2021 Arce Alan - Molina Enzo Agustin - Palacio Luciano
