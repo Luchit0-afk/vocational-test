@@ -108,5 +108,29 @@ class App < Sinatra::Base
     erb :outcomes_index
   end
 
+  post "/quantities" do
+    @career = Career.find(name: (params[:carrera]))
+    @initialDate = DateTime.iso8601(params[:fecha1])
+    @auxDate = Time.parse(@initialDate.to_s)
+    @finalDate = DateTime.iso8601(params[:fecha2])
+    days = (@finalDate - @initialDate).to_i
+    quantities = Quantity.all
+    @careers = Career.all
+    @cant = 0
+
+    for c in 0..days do 
+      arr = quantities.select{|q| q.date.year == @auxDate.year && q.date.month == @auxDate.month && q.date.day == @auxDate.day && q.career_id == @career.id}
+      if arr.empty? 
+        c = 0
+      else
+        c = arr[0].cant
+      end
+      @cant += c   
+      @auxDate = @auxDate + (86400)
+    end
+
+    erb :quantities_index
+  end
+
 end
 
