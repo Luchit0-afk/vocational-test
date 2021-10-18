@@ -3,24 +3,27 @@
 <head>
 	<meta charset="utf-8">
 	<title> Queantities </title>
+	<link rel="stylesheet" type="text/css" href="styles_quantities.css">
 </head>
 <body>
-	<div id = "agrupar">
 		<p id="information"> 
 			Desde el <%=@fechaInicial.day%>-<%=@fechaInicial.month%>-<%=@fechaInicial.year%> hasta 
 			<%=@fechaFinal.day%>-<%=@fechaFinal.month%>-<%=@fechaFinal.year%> la carrera <%= @carrera.name
 			%> fue elegida <%=@cant %> veces.
 		</p>
+		<div id = "agrupar">
 		<div id ="Encuesta">
-				<p id="tituloEncuesta">¿Desea conocer la cantidad de encuestas resultantes de alguna otra carrera carrera? </p>
+				<p id="tituloEncuesta">¿Desea conocer la cantidad de encuestas resultantes de alguna otra carrera? </p>
 				<form action="/quantities" method="POST">
 					<label>Ingrese la fecha inicial</label>
 					<input type="date" name="fecha1" value=<%= Time.now%>>
 					<br>
+					<br>
 					<label>Ingrese la fecha final</label>
 					<input type="date" name="fecha2" value=<%= Time.now%>>
 					<br>
-					<select name="carrera">
+					<br>
+					<select id="carreras" name="carrera">
 						<% @careers.map do |career| %>
 							<option value="<%= career.name %>"> 
 								<%= career.name %>
