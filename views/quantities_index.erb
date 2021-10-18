@@ -7,8 +7,8 @@
 </head>
 <body>
 		<p id="information"> 
-			Desde el <%=@fechaInicial.day%>-<%=@fechaInicial.month%>-<%=@fechaInicial.year%> hasta 
-			<%=@fechaFinal.day%>-<%=@fechaFinal.month%>-<%=@fechaFinal.year%> la carrera <%= @carrera.name
+			Desde el <%=@initialDate.day%>-<%=@initialDate.month%>-<%=@initialDate.year%> hasta 
+			<%=@finalDate.day%>-<%=@finalDate.month%>-<%=@finalDate.year%> la carrera <%= @career.name
 			%> fue elegida <%=@cant %> veces.
 		</p>
 		<div id = "agrupar">
@@ -34,6 +34,7 @@
 					<input type = 'submit' value = 'Enviar'>
 				</form>
 			</div>
+			<%= @arr %>
 	</div>
 	<footer>
 			UNRC &copy; 2021 Arce Alan - Molina Enzo Agustin - Palacio Luciano
