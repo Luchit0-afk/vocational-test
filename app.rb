@@ -104,6 +104,19 @@ class App < Sinatra::Base
     @career = Career.find(id: career)
 
     @survey.update(career_id: @career.id)
+
+    # MOLI
+
+    @today = Time.now
+    @array = Quantity.all.select{|q| @career.id == q.career_id && @today.day == q.date.day && @today.month == q.date.month && @today.year == q.date.year}
+
+    if @array.empty?
+      Quantity.create(career_id: @career.id, date: @today, cant: 1)
+    else 
+      @new_cant = @array.first.cant + 1
+      @array.first.destroy
+      Quantity.create(career_id: @career.id, date: @today, cant: @new_cant)
+    end
     
     erb :outcomes_index
   end
