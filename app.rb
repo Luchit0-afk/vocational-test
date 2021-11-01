@@ -20,10 +20,6 @@ class App < Sinatra::Base
     erb :careers_index
   end
 
-  get '/careers/:id' do
-    "Carrera"
-  end
-
   get '/posts' do
     p = Post.where(id: 1).last
     p.description
