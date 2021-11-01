@@ -4,12 +4,12 @@ class Career < Sequel::Model
   one_to_many :surveys
   one_to_many :outcomes
 
-  def associateLink
+  def associate_link
     link = ''
     agronomia = 'https://www.unrc.edu.ar/unrc/carreras/ayv_ingenieria_agronomica.htm'
     computacion = 'https://www.unrc.edu.ar/unrc/carreras/exa_lic_ciencias_computacion.php'
     economia = 'https://www.unrc.edu.ar/unrc/carreras/eco_lic_economia.htm'
-    edFisica = 'https://www.unrc.edu.ar/unrc/carreras/hum_prof_educacion_fisica.php'
+    ed_fisica = 'https://www.unrc.edu.ar/unrc/carreras/hum_prof_educacion_fisica.php'
     filosofia = 'https://www.unrc.edu.ar/unrc/carreras/hum_lic_en_filosofia.php'
     fisica = 'https://www.unrc.edu.ar/unrc/carreras/exa_prof_fisica.php'
     geologia = 'https://www.unrc.edu.ar/unrc/carreras/exa_lic_geologia.php'
@@ -35,7 +35,7 @@ class Career < Sequel::Model
     when 'Economía'
       link = economia
     when 'Educacion Fisica'
-      link = edFisica
+      link = ed_fisica
     when 'Filosofía'
       link = filosofia
     when 'Fisica'
