@@ -45,14 +45,13 @@ class App < Sinatra::Base
     @survey = Survey.find(id: params[:survey_id])
 
     params[:question_id].each do |question_id|
-      response = Response.new(survey_id: @survey.id, question_id: question_id,choice_id: params[:"#{question_id}"])
-      response.save
+      response = Response.create(survey_id: @survey.id, question_id: question_id,choice_id: params[:"#{question_id}"])
     end
 
-    career = Survey.searchSuitableCareer(@survey)
-    @career = Career.find(id: career)
+    career_id = Survey.searchSuitableCareer(@survey)
+    @career = Career.find(id: career_id)
 
-    @survey.update(career_id: @career.id)
+    @survey.update(career_id: @career_id)
     
     erb :outcomes_index
   end
