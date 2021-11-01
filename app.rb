@@ -46,7 +46,7 @@ class App < Sinatra::Base
     @survey = Survey.find(id: params[:survey_id])
 
     params[:question_id].each do |question_id|
-      response = Response.create(survey_id: @survey.id, question_id: question_id, choice_id: params[:"#{question_id}"])
+      Response.create(survey_id: @survey.id, question_id: question_id, choice_id: params[:"#{question_id}"])
     end
 
     career_id = Survey.searchSuitableCareer(@survey)
