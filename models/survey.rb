@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 class Survey < Sequel::Model
- many_to_one :career
- one_to_many :responses
+  many_to_one :career
+  one_to_many :responses
   def validate
     super
     errors.add(:username, 'cannot be empty') if !username || username.empty?
@@ -9,17 +11,17 @@ class Survey < Sequel::Model
   def self.searchSuitableCareer(survey)
     table = {}
 
-    for career in Career.all
+    Career.all.each do |career|
       table[career.id] = 0
     end
 
-    for response in survey.responses
+    survey.responses.each do |response|
       choice = Choice.find(id: response.choice_id)
-      for outcome in choice.outcomes
+      choice.outcomes.each do |outcome|
         table[outcome.career_id] += 1
       end
     end
 
-    return table.key(table.values.max)
+    table.key(table.values.max)
   end
 end

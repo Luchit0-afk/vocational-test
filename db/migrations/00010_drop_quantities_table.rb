@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Sequel.migration do
   down do
     create_table(:quantities) do
