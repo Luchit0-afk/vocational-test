@@ -9,19 +9,19 @@ class Survey < Sequel::Model
   end
 
   def self.search_suitable_career(survey)
-    table = {}
+    careers = {}
 
     Career.all.each do |career|
-      table[career.id] = 0
+      careers[career.id] = 0
     end
 
     survey.responses.each do |response|
       choice = Choice.find(id: response.choice_id)
       choice.outcomes.each do |outcome|
-        table[outcome.career_id] += 1
+        careers[outcome.career_id] += 1
       end
     end
 
-    table.key(table.values.max)
+    careers.key(careers.values.max)
   end
 end
