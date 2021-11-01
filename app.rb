@@ -73,27 +73,17 @@ class App < Sinatra::Base
   end
 
   post "/quantities" do
+    @car_id = Career.where(name: params['carrera']).first.id
+    @date2 = Time.parse(params[:fecha2]) + (86400)
+    @date1 = Time.parse(params[:fecha1])
+    @cant = Survey.where(Sequel.lit('created_at > ? AND created_at < ? AND career_id = ?', @date1, @date2, @car_id.to_i())).count()
+    @careers = Career.all
     @career = Career.find(name: (params[:carrera]))
     @initialDate = DateTime.iso8601(params[:fecha1])
-    @auxDate = Time.parse(@initialDate.to_s)
     @finalDate = DateTime.iso8601(params[:fecha2])
-    days = (@finalDate - @initialDate).to_i
-    quantities = Quantity.all
-    @careers = Career.all
-    @cant = 0
-
-    for c in 0..days do 
-      arr = quantities.select{|q| q.date.year == @auxDate.year && q.date.month == @auxDate.month && q.date.day == @auxDate.day && q.career_id == @career.id}
-      if arr.empty? 
-        c = 0
-      else
-        c = arr[0].cant
-      end
-      @cant += c   
-      @auxDate = @auxDate + (86400)
-    end
 
     erb :quantities_index
   end
+  
 end
 
