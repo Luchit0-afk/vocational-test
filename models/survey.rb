@@ -8,7 +8,7 @@ class Survey < Sequel::Model
     errors.add(:username, 'cannot be empty') if !username || username.empty?
   end
 
-  def self.searchSuitableCareer(survey)
+  def self.search_suitable_career(survey)
     table = {}
 
     Career.all.each do |career|

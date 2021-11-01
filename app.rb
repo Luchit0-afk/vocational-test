@@ -66,8 +66,8 @@ class App < Sinatra::Base
                                      @career_id.to_i)).count
     @careers = Career.all
     @career = Career.find(name: params[:carrera])
-    @initialDate = DateTime.iso8601(params[:fecha1])
-    @finalDate = DateTime.iso8601(params[:fecha2])
+    @initial_date = DateTime.iso8601(params[:fecha1])
+    @final_date = DateTime.iso8601(params[:fecha2])
 
     erb :quantities_index
   end
