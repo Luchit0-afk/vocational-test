@@ -25,16 +25,6 @@ class App < Sinatra::Base
     erb :response_index
   end
 
-  post '/questions' do
-    questions = Question.new(name: params[:name])
-
-    if questions.save
-      [201, {'Location' => "careers/#{career.id}" },'CREATED']
-    else
-      [500,{},'Internal Server Error']
-    end
-  end
-
   get '/surveys' do
     @survey = Survey.new(username: params[:username])
 
