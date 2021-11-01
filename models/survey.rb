@@ -9,17 +9,17 @@ class Survey < Sequel::Model
   def self.searchSuitableCareer(survey)
     table = {}
 
-      for career in Career.all
-        table[career.id] = 0
-      end
-        
-      for response in survey.responses
-        choice = Choice.find(id: response.choice_id)
-        for outcome in choice.outcomes
-          table[outcome.career_id] += 1
-        end
-      end
-
-      return table.key(table.values.max)
+    for career in Career.all
+      table[career.id] = 0
     end
+
+    for response in survey.responses
+      choice = Choice.find(id: response.choice_id)
+      for outcome in choice.outcomes
+        table[outcome.career_id] += 1
+      end
+    end
+
+    return table.key(table.values.max)
+  end
 end
