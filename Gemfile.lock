@@ -38,6 +38,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  rubocop
   dotenv (= 2.7.5)
   minitest
   minitest-color
