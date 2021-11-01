@@ -20,11 +20,6 @@ class App < Sinatra::Base
     erb :careers_index
   end
 
-  get '/posts' do
-    p = Post.where(id: 1).last
-    p.description
-  end
-
   get '/questions' do
     @questions = Question.all
     erb :response_index
