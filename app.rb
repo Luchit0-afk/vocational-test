@@ -55,28 +55,15 @@ class App < Sinatra::Base
     @career = Career.find(id: career)
 
     @survey.update(career_id: @career.id)
-
-    # BORRAR?
-
-    @today = Time.now
-    @array = Quantity.all.select{|q| @career.id == q.career_id && @today.day == q.date.day && @today.month == q.date.month && @today.year == q.date.year}
-
-    if @array.empty?
-      Quantity.create(career_id: @career.id, date: @today, cant: 1)
-    else 
-      @new_cant = @array.first.cant + 1
-      @array.first.destroy
-      Quantity.create(career_id: @career.id, date: @today, cant: @new_cant)
-    end
     
     erb :outcomes_index
   end
 
   post "/quantities" do
-    @car_id = Career.where(name: params['carrera']).first.id
+    @career_id = Career.where(name: params['carrera']).first.id
     @date2 = Time.parse(params[:fecha2]) + (86400)
     @date1 = Time.parse(params[:fecha1])
-    @cant = Survey.where(Sequel.lit('created_at > ? AND created_at < ? AND career_id = ?', @date1, @date2, @car_id.to_i())).count()
+    @count = Survey.where(Sequel.lit('created_at > ? AND created_at < ? AND career_id = ?', @date1, @date2, @career_id.to_i())).count()
     @careers = Career.all
     @career = Career.find(name: (params[:carrera]))
     @initialDate = DateTime.iso8601(params[:fecha1])
