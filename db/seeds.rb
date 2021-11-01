@@ -1,7 +1,6 @@
 #Clean dataSet
 Response.all.map { |r| r.destroy }
 Survey.all.map 	 { |s| s.destroy }
-Quantity.all.map { |q| q.destroy }
 Career.all.map   { |c| c.destroy }
 Outcome.all.map  { |o| o.destroy }
 Choice.all.map   { |e| e.destroy }
