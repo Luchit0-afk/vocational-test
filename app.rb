@@ -6,12 +6,6 @@ class App < Sinatra::Base
     erb :hello_template
   end
 
-  get "/hello/:name" do
-   @name = params[:name]
-   
-   erb :hello_template
-  end
-
   post "/careers" do
     career = Career.new(name: params[:name])
 
