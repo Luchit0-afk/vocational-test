@@ -10,67 +10,8 @@
 			<h2> La carrera recomendada para vos es: </h2>
 		</div>
 
-		<%
-			career = @career.name
-
-			link = ""
-			agronomia = "https://www.unrc.edu.ar/unrc/carreras/ayv_ingenieria_agronomica.htm"
-			computacion = "https://www.unrc.edu.ar/unrc/carreras/exa_lic_ciencias_computacion.php"
-			economia = "https://www.unrc.edu.ar/unrc/carreras/eco_lic_economia.htm"
-			edFisica = "https://www.unrc.edu.ar/unrc/carreras/hum_prof_educacion_fisica.php"
-			filosofia = "https://www.unrc.edu.ar/unrc/carreras/hum_lic_en_filosofia.php"
-			fisica = "https://www.unrc.edu.ar/unrc/carreras/exa_prof_fisica.php"
-			geologia = "https://www.unrc.edu.ar/unrc/carreras/exa_lic_geologia.php"
-			historia = "https://www.unrc.edu.ar/unrc/carreras/hum_lic_historia.php"
-			literatura = "https://www.unrc.edu.ar/unrc/carreras/ProgAsig5.php?n=%2FBpLfBDYxXmQaxDePIM%2Bvqvf5cLyAysalAWtwPjvud4%3D"
-			matematica = "https://www.unrc.edu.ar/unrc/carreras/exa_lic_matematica.php"
-			medicina = "https://fcm.unc.edu.ar/"
-			periodismo = "https://www.unrc.edu.ar/unrc/carreras/hum_comunicacion_social.php"
-			quimica = "https://www.unrc.edu.ar/unrc/carreras/exa_lic_quimica.php"
-			sociologia = "https://sociales.unc.edu.ar/licenciaturasociologia"
-			veterinaria = "https://www.unrc.edu.ar/unrc/carreras/ayv_medicina_veterinaria.htm"
-			arquitectura = "https://faud.unc.edu.ar/carrera-de-arquitectura/"
-			arte = "https://artes.unc.edu.ar/"
-
-			if career == "Agronomia" then
-				link = agronomia
-			elsif career == "Arquitectura" then
-				link = arquitectura
-			elsif career == "Arte" then
-				link = arte
-			elsif career == "Computación" then
-				link = computacion
-			elsif career == "Economía" then
-				link = economia
-			elsif career == "Educacion Fisica" then
-				link = edFisica
-			elsif career == "Filosofía" then
-				link = filosofia
-			elsif career == "Fisica" then
-				link = fisica
-			elsif career == "Geología" then
-				link = geologia
-			elsif career == "Historia" then
-				link = historia
-			elsif career == "Literatura" then
-				link = literatura
-			elsif career == "Matemáticas" then
-				link = matematica
-			elsif career == "Medicina" then
-				link = medicina
-			elsif career == "Periodismo" then
-				link = periodismo
-			elsif career == "Química" then
-				link = quimica
-			elsif career == "Sociología" then
-				link = sociologia
-			elsif career == "Veterinaria" then
-				link = veterinaria
-			end
-		%>
-
 		<div class="centerTop">
-			<h1> <a href=<%=link%>> <%=career%> </a> </h1>
+			<h1> <a href=<%=@career.associateLink%> target="_blank"> <%=@career.name%> </a> </h1>
 		</div>
 
 		<div class="centerLeft">

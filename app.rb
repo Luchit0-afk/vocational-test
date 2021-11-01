@@ -8,9 +8,7 @@ class App < Sinatra::Base
 
   post "/careers" do
     career = Career.new(name: params[:name])
-
     career.save
-    
     redirect "/careers"
   end
 
