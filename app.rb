@@ -50,26 +50,13 @@ class App < Sinatra::Base
       response = Response.new(survey_id: @survey.id, question_id: question_id,choice_id: params[:"#{question_id}"])
       response.save
     end
-    
-    table = {}
 
-    for career in Career.all
-      table[career.id] = 0
-    end
-      
-    for response in @survey.responses
-      choice = Choice.find(id: response.choice_id)
-      for outcome in choice.outcomes
-        table[outcome.career_id] += 1
-      end
-    end
-
-    career = table.key(table.values.max)
+    career = Survey.searchSuitableCareer(@survey)
     @career = Career.find(id: career)
 
     @survey.update(career_id: @career.id)
 
-    # MOLI
+    # BORRAR?
 
     @today = Time.now
     @array = Quantity.all.select{|q| @career.id == q.career_id && @today.day == q.date.day && @today.month == q.date.month && @today.year == q.date.year}
@@ -108,6 +95,5 @@ class App < Sinatra::Base
 
     erb :quantities_index
   end
-
 end
 
