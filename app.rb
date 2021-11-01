@@ -20,17 +20,6 @@ class App < Sinatra::Base
     erb :careers_index
   end
 
-  post "/posts" do
-    request.body.rewind 
-    data = JSON.parse request.body.read
-    post = Post.new(description: data['desc'])
-    if post.save
-      [201, { 'Location' => "posts/#{post.id}" }, 'CREATED']
-    else
-      [500, {}, 'Internal Server Error']
-    end
-  end
-
   get '/careers/:id' do
     "Carrera"
   end
