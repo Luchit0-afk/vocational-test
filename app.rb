@@ -52,7 +52,7 @@ class App < Sinatra::Base
     career_id = Survey.search_suitable_career(@survey)
     @career = Career.find(id: career_id)
 
-    @survey.update(career_id: @career_id)
+    @survey.update(career_id: career_id)
 
     erb :outcomes_index
   end
