@@ -1,0 +1,17 @@
+Layout/LineLength:
+  Max: 300
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+Lint/Void:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false

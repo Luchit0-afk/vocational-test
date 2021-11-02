@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Career < Sequel::Model
   one_to_many :surveys
   one_to_many :outcomes

@@ -1,6 +1,3 @@
-# frozen_string_literal: true
-
-# App of the vocational-test
 require './models/init'
 
 class App < Sinatra::Base
