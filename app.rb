@@ -59,7 +59,7 @@ class App < Sinatra::Base
 
   post '/quantities' do
     @career_id = Career.where(name: params['carrera']).first.id
-    @date2 = Time.parse(params[:fecha2]) + 86_400
+    @date2 = Time.parse(params[:fecha2]) + 86400
     @date1 = Time.parse(params[:fecha1])
     @count = Survey.where(Sequel.lit('created_at > ? AND created_at < ? AND career_id = ?', @date1, @date2,
                                      @career_id.to_i)).count
