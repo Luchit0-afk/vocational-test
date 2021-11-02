@@ -47,7 +47,7 @@ class App < Sinatra::Base
       Response.create(survey_id: @survey.id, question_id: question_id, choice_id: params[:"#{question_id}"])
     end
 
-    career_id = Survey.searchSuitableCareer(@survey)
+    career_id = Survey.search_suitable_career(@survey)
     @career = Career.find(id: career_id)
 
     @survey.update(career_id: @career_id)
